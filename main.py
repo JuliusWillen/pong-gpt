@@ -1,6 +1,5 @@
 import pygame
 import numpy as np
-import pygame.sndarray as snd
 import pygame.mixer
 
 # Initialize the mixer module
@@ -156,9 +155,9 @@ while menu_loop:
             if start_rect.collidepoint(mouse_pos):
                 menu_loop = False
                 # Add a countdown before starting the game
-                count_down_texts = [font.render("Korv?", True, WHITE),
-                                    font.render("med", True, WHITE),
-                                    font.render("Bröd!!!!", True, WHITE)]
+                count_down_texts = [font.render("3", True, WHITE),
+                                    font.render("2", True, WHITE),
+                                    font.render("1", True, WHITE)]
                 for text in count_down_texts:
                     screen.fill(BLACK)
                     screen.blit(text, text.get_rect(center=(screen_width // 2, screen_height // 2)))
